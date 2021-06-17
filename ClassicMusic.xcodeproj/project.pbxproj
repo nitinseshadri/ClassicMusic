@@ -13,6 +13,8 @@
 		2249932526727ECE00474CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2249932426727ECE00474CA4 /* Preview Assets.xcassets */; };
 		227DF8ED267799ED00E05943 /* TLTiltSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DF8EC267799ED00E05943 /* TLTiltSlider.m */; };
 		2291CE9D2676569E00B93FE3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2291CE9C2676569E00B93FE3 /* Launch Screen.storyboard */; };
+		22BE3D31267BEE78005F7307 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BE3D30267BEE78005F7307 /* VolumeView.swift */; };
+		22BE3D35267BEEEB005F7307 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BE3D34267BEEEB005F7307 /* BatteryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		227DF8EB267799ED00E05943 /* TLTiltSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTiltSlider.h; sourceTree = "<group>"; };
 		227DF8EC267799ED00E05943 /* TLTiltSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTiltSlider.m; sourceTree = "<group>"; };
 		2291CE9C2676569E00B93FE3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		22BE3D30267BEE78005F7307 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		22BE3D34267BEEEB005F7307 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				2249932C26727EF000474CA4 /* ClassicMusic.entitlements */,
 				2249931D26727EC900474CA4 /* ClassicMusicApp.swift */,
 				2249931F26727EC900474CA4 /* ContentView.swift */,
+				22BE3D30267BEE78005F7307 /* VolumeView.swift */,
+				22BE3D34267BEEEB005F7307 /* BatteryView.swift */,
 				2291CE9C2676569E00B93FE3 /* Launch Screen.storyboard */,
 				227DF8EB267799ED00E05943 /* TLTiltSlider.h */,
 				227DF8EC267799ED00E05943 /* TLTiltSlider.m */,
@@ -157,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2249932026727EC900474CA4 /* ContentView.swift in Sources */,
+				22BE3D35267BEEEB005F7307 /* BatteryView.swift in Sources */,
 				227DF8ED267799ED00E05943 /* TLTiltSlider.m in Sources */,
+				22BE3D31267BEE78005F7307 /* VolumeView.swift in Sources */,
 				2249931E26727EC900474CA4 /* ClassicMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
