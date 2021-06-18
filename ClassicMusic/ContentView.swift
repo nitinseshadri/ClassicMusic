@@ -178,9 +178,11 @@ struct ContentView: View {
                 // Album art
                 ZStack {
                     Spacer()
-                    Image(uiImage: song?.artwork?.image(at: CGSize(width: 400, height: 400)) ?? UIImage(named: "MusicNoArtPlaceholder")!)
-                        .resizable()
-                        .scaledToFit()
+                    AlbumArtView(mediaItem: Binding(get: {
+                        song
+                    }, set: { (newValue) in
+                        
+                    }))
                 }
                 .frame(width: 320, height: 320)
                 
