@@ -302,7 +302,7 @@
 				CODE_SIGN_ENTITLEMENTS = ClassicMusic/ClassicMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ClassicMusic/Preview Content\"";
-				DEVELOPMENT_TEAM = S96BBABP6J;
+				DEVELOPMENT_TEAM = DC7TWT94U4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ClassicMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -329,7 +329,7 @@
 				CODE_SIGN_ENTITLEMENTS = ClassicMusic/ClassicMusic.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ClassicMusic/Preview Content\"";
-				DEVELOPMENT_TEAM = S96BBABP6J;
+				DEVELOPMENT_TEAM = DC7TWT94U4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ClassicMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
