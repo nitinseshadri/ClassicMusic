@@ -27,8 +27,6 @@ struct AlbumArtView: UIViewRepresentable {
 
 class NSXAlbumArtView: UIView {
     
-    private let systemMusicPlayer = MPMusicPlayerController.systemMusicPlayer
-    
     private var frontView: UIImageView!
     private var defaultFrontImage: UIImage!
     private var backView: UIImageView!
