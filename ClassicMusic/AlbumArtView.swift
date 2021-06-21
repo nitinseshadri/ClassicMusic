@@ -15,7 +15,7 @@ struct AlbumArtView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> NSXAlbumArtView {
         let albumArtView = NSXAlbumArtView(frame: .zero, defaultFrontImage: UIImage(named: "MusicNoArtPlaceholder")!, defaultBackImage: UIImage(named: "NowPlayingTableBackground")!)
-        albumArtView.transitionDuration = 1.0
+        albumArtView.transitionDuration = 0.75
         albumArtView.mediaItem = mediaItem
         return albumArtView
     }
@@ -34,7 +34,7 @@ class NSXAlbumArtView: UIView {
     private var backView: UIImageView!
     private var defaultBackImage: UIImage!
     
-    public var transitionDuration = 1.0
+    public var transitionDuration = 0.75
     public var mediaItem: MPMediaItem? {
         didSet {
             frontView.image = mediaItem?.artwork?.image(at: CGSize(width: 400, height: 400)) ?? defaultFrontImage
