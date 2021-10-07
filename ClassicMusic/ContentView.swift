@@ -49,6 +49,8 @@ struct ContentView: View {
     let mediaPublisher = NotificationCenter.default
             .publisher(for: .MPMusicPlayerControllerPlaybackStateDidChange) //MPMusicPlayerControllerPlaybackStateDidChange
     
+    @State var scaleFactor: Double = 1.0
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -274,6 +276,19 @@ struct ContentView: View {
                 updateUI()
             }
         }
+        .onTapGesture(count: 3) {
+            withAnimation(.default) {
+                if (scaleFactor == 1.0) {
+                    // Scale to fit device's screen width
+                    let screenWidth = UIScreen.main.bounds.width
+                    scaleFactor = screenWidth / 320
+                } else {
+                    // Original scale
+                    scaleFactor = 1.0
+                }
+            }
+        }
+        .scaleEffect(scaleFactor)
     }
     
     func updateUI() {
