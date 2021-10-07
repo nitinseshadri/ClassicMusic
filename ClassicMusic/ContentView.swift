@@ -291,9 +291,15 @@ struct ContentView: View {
         .onTapGesture(count: 3) {
             withAnimation(.default) {
                 if (scaleFactor == 1.0) {
+                    #if targetEnvironment(macCatalyst)
+                    // Scale to fit window height
+                    let screenHeight = UIScreen.main.bounds.height
+                    scaleFactor = screenHeight / 568
+                    #else
                     // Scale to fit device's screen width
                     let screenWidth = UIScreen.main.bounds.width
                     scaleFactor = screenWidth / 320
+                    #endif
                 } else {
                     // Original scale
                     scaleFactor = 1.0
