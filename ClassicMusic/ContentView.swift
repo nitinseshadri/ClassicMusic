@@ -16,7 +16,19 @@ struct ContentView: View {
             #if targetEnvironment(macCatalyst)
             "iPod"
             #else
-            CTTelephonyNetworkInfo().serviceSubscriberCellularProviders?.first?.value.carrierName ?? "No SIM"
+            if let providers = CTTelephonyNetworkInfo().serviceSubscriberCellularProviders {
+                for provider in providers {
+                    // Get the first non-null carrier name
+                    // This may not be the first provider in the list of providers, so we need to check each one.
+                    // An eSIM that is not configured has a null carrier name.
+                    if let carrierName = provider.value.carrierName {
+                        return carrierName
+                    }
+                }
+                return "No SIM"
+            } else {
+                return "No SIM"
+            }
             #endif
         }
     }
