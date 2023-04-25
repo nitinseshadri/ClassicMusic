@@ -3,3 +3,5 @@
 //
 
 #import "TLTiltSlider.h"
+
+#import "MTZTiltReflectionSlider.h"

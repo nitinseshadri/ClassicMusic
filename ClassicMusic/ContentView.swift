@@ -170,16 +170,22 @@ struct ContentView: View {
                             Spacer()
                             HStack() {
                                 Text(formatter.string(from: systemMusicPlayer.currentPlaybackTime)!)
-                                    .font(.custom("Helvetica Neue Bold", size: 12)).foregroundColor(Color(red: 159/255, green: 159/255, blue: 159/255)).shadow(color: Color.black.opacity(0.8), radius: 0, x: 0.0, y: -1)
-                                Slider(value: Binding(get: {
-                                    systemMusicPlayer.currentPlaybackTime
+                                    .font(.custom("Helvetica Neue Bold", size: 12).monospacedDigit()).foregroundColor(Color(red: 159/255, green: 159/255, blue: 159/255)).shadow(color: Color.black.opacity(0.8), radius: 0, x: 0.0, y: -1)
+                                    .offset(y: -4)
+                                TiltReflectionSliderView(size: .small, value: Binding(get: {
+                                    Float(systemMusicPlayer.currentPlaybackTime)
                                 }, set: { (newValue) in
                                     DispatchQueue.main.async {
-                                        systemMusicPlayer.currentPlaybackTime = newValue
+                                        systemMusicPlayer.currentPlaybackTime = TimeInterval(newValue)
                                     }
-                                }), in: 0...(song?.playbackDuration ?? 0))
+                                }), minimumValue: 0, maximumValue: Binding(get: {
+                                    Float((song?.playbackDuration ?? 0))
+                                }, set: { (newValue) in
+                                    // Nothing to do.
+                                }), hasContinuousUpdates: false, animateChanges: false)
                                 Text(formatter.string(from: systemMusicPlayer.currentPlaybackTime - (song?.playbackDuration ?? 0))!)
-                                    .font(.custom("Helvetica Neue Bold", size: 12)).foregroundColor(Color(red: 159/255, green: 159/255, blue: 159/255)).shadow(color: Color.black.opacity(0.8), radius: 0, x: 0.0, y: -1)
+                                    .font(.custom("Helvetica Neue Bold", size: 12).monospacedDigit()).foregroundColor(Color(red: 159/255, green: 159/255, blue: 159/255)).shadow(color: Color.black.opacity(0.8), radius: 0, x: 0.0, y: -1)
+                                    .offset(y: -4)
                             }
                             Spacer()
                         }
