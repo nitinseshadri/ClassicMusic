@@ -11,12 +11,12 @@ import MediaPlayer
 
 struct VolumeView: UIViewRepresentable {
     
-    static private let tiltSlider = TLTiltSlider(frame: .zero)
+    static private let tiltSlider = MTZTiltReflectionSlider(sliderSize: MTZTiltReflectionSliderSizeRegular)!
     
     func makeUIView(context: Context) -> MPVolumeView {
         let volumeView = MPVolumeView(frame: .zero)
-        volumeView.setMinimumVolumeSliderImage(UIImage(named: "highlightedBarBackground")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 0)), for: .normal)
-        volumeView.setMaximumVolumeSliderImage(UIImage(named: "trackBackground")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 4)), for: .normal)
+        volumeView.setMinimumVolumeSliderImage(UIImage(named: "MTZTiltReflectionSliderTrackFill")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 0)), for: .normal)
+        volumeView.setMaximumVolumeSliderImage(UIImage(named: "MTZTiltReflectionSliderTrackEmpty")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 6)), for: .normal)
         volumeView.setVolumeThumbImage(VolumeView.tiltSlider.currentThumbImage, for: .normal)
         volumeView.setRouteButtonImage(UIImage(named: "AirPlayOff")!, for: .normal)
         volumeView.setRouteButtonImage(UIImage(named: "AirPlayOn")!, for: .selected)
